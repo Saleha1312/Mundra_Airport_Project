@@ -1,0 +1,285 @@
+/* 
+   Airport FIDS TV Display Style
+   Theme: Classic Aviation Blue (Original Color Scheme)
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #243F73;
+    color: white;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    padding: 1.5vh 1.5vw;
+}
+
+/* Main FIDS Board Layout */
+.fids-board {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #1A2D52;
+    background-color: #243F73;
+}
+
+/* Board Header (Original Blue Gradient Layout) */
+.board-header {
+    height: 14vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    background: linear-gradient(90deg, #002060, #2F75B5);
+    border-bottom: 3px solid #1A2D52;
+    box-sizing: border-box;
+}
+
+/* Header Left: Clock & Date */
+.header-time-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.header-time {
+    font-size: 32px;
+    font-weight: bold;
+    font-family: monospace, sans-serif;
+    line-height: 1;
+    color: white;
+}
+
+.header-date {
+    font-size: 13px;
+    color: #b5c7e3;
+    font-weight: bold;
+    margin-top: 4px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Header Center: View and Page */
+.header-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-title {
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.header-page {
+    font-size: 18px;
+    font-weight: bold;
+    color: #b5c7e3;
+    margin-top: 4px;
+    letter-spacing: 1px;
+}
+
+/* Header Right: Airport & Status Details */
+.header-right-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.header-airport {
+    font-size: 20px;
+    font-weight: bold;
+    color: #DFE8F6;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+.header-updated {
+    font-size: 13px;
+    color: #b5c7e3;
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+.header-filter-badge {
+    font-size: 12px;
+    color: #00FFFF;
+    font-weight: bold;
+    margin-top: 4px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* FIDS Table Container */
+.fids-table-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.fids-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    height: 100%;
+}
+
+.fids-table th {
+    height: 6vh;
+    background: #3A7BBB;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 2px solid #1A2D52;
+    padding: 0 15px;
+    text-align: left;
+}
+
+/* Row height setting: 8 rows of 9vh each = 72vh */
+.flight-row {
+    height: 9vh;
+    border-bottom: 1px solid #1A2D52;
+}
+
+.fids-table tbody tr:nth-child(even) {
+    background: #29467E;
+}
+
+.fids-table tbody tr:nth-child(odd) {
+    background: #243F73;
+}
+
+.fids-table td {
+    padding: 0 15px;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+/* Columns */
+.flight-col {
+    font-weight: bold;
+}
+
+.time-col {
+    font-family: monospace, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.scheduled-time {
+    color: white;
+}
+
+.estimated-time {
+    color: #00FFFF; /* Cyan color from original */
+}
+
+/* Airline Cell with Logo */
+.airline-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.airline-logo {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    border-radius: 4px;
+    background-color: #ffffff;
+    padding: 2px;
+    border: 1px solid #1A2D52;
+}
+
+.airline-name {
+    color: white;
+    font-weight: bold;
+}
+
+/* Status Pill Styling (Original colors) */
+.status-pill {
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+    min-width: 110px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.landed {
+    background: #0A7D2C;
+}
+
+.ontime {
+    background: #0B8F44;
+}
+
+.delayed {
+    background: #C96A00;
+}
+
+.enroute {
+    background: #008B9A;
+}
+
+.scheduled {
+    background: #1A2D52;
+}
+
+.cancelled {
+    background: #991b1b;
+}
+
+/* Aircraft Column */
+.aircraft-col {
+    font-weight: bold;
+}
+
+/* Empty row filler styling */
+.empty-row td {
+    color: transparent;
+    user-select: none;
+}
+
+/* Loading & Empty cell state */
+.loading-cell, .empty-cell {
+    text-align: center;
+    font-size: 18px;
+    color: #8fa7d1;
+    height: 100%;
+    vertical-align: middle;
+}
+
+/* Board Footer */
+.board-footer {
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-top: 3px solid #1A2D52;
+    font-size: 14px;
+    color: #8fa7d1;
+    box-sizing: border-box;
+}
+
+.footer-center {
+    font-weight: bold;
+}

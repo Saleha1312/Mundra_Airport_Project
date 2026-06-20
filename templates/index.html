@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmedabad Airport (AMD) FIDS - TV Display</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <!-- Main FIDS Board Display -->
+    <div class="fids-board">
+        
+        <!-- Board Header (Classic Layout) -->
+        <div class="board-header">
+            <div class="header-time-container">
+                <div id="clockTime" class="header-time">00:00:00</div>
+                <div id="clockDate" class="header-date">-- --- ----</div>
+            </div>
+            
+            <div class="header-center">
+                <div id="boardTitle" class="header-title">ARRIVALS</div>
+                <div id="pageIndicator" class="header-page">PAGE 1 OF 1</div>
+            </div>
+            
+            <div class="header-right-info">
+                <div class="header-airport">Sardar Vallabhbhai Patel Int'l Airport (AMD)</div>
+                <div id="updatedTime" class="header-updated">Last Updated: --:--:--</div>
+                <div class="header-filter-badge">TODAY'S FLIGHTS ONLY</div>
+            </div>
+        </div>
+
+        <!-- FIDS Flight Table Container -->
+        <div class="fids-table-container">
+            <table class="fids-table">
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Flight</th>
+                        <th style="width: 25%;">Airline</th>
+                        <th style="width: 25%;">From / To</th>
+                        <th id="scheduledHeader" style="width: 10%;">STA</th>
+                        <th id="estimatedHeader" style="width: 10%;">ETA</th>
+                        <th style="width: 12%;">Status</th>
+                        <th style="width: 8%;">Aircraft</th>
+                    </tr>
+                </thead>
+                <tbody id="flightTable">
+                    <tr>
+                        <td colspan="7" class="loading-cell">
+                            Loading Live Flight Schedules...
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Board Footer -->
+        <div class="board-footer">
+            <div class="footer-left">SYSTEM ONLINE • LIVE DATA FEED</div>
+            <div class="footer-center">SARDAR VALLABHBHAI PATEL INTERNATIONAL AIRPORT (AMD / VAAH)</div>
+            <div class="footer-right">AUTO-ROTATION CYCLE (10S)</div>
+        </div>
+    </div>
+
+    <script src="/static/script.js" defer></script>
+</body>
+</html>
