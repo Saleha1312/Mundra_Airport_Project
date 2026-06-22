@@ -42,10 +42,10 @@ def get_airport_details_cached():
             
     return None
 
-def get_flights(airport_code="AMD", direction="arrivals"):
+def get_flights(airport_code="VAAH", direction="arrivals"):
     """
     Returns the real-time list of arrivals or departures for Ahmedabad.
-    Ignores airport_code to enforce Ahmedabad (AMD) only.
+    Ignores airport_code to enforce Ahmedabad (VAAH) only.
     Filters flights to only include those scheduled for the current date in IST.
     """
     details = get_airport_details_cached()

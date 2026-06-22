@@ -1,3 +1,5 @@
+# Author : Saleha Bushra 
+
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
@@ -22,9 +24,9 @@ async def home(request: Request):
 
 
 @app.get("/api/arrivals")
-async def arrivals(airport: str = "AMD"):
+async def arrivals(airport: str = "VAAH"):
     return get_flights(airport, "arrivals")
 
 @app.get("/api/departures")
-async def departures(airport: str = "AMD"):
-    return get_flights(airport, "departures")
+async def departures(airport: str = "VAAH"):
+    return get_flights(airport, "departures")

@@ -1,6 +1,7 @@
-# Ahmedabad Airport FIDS - TV Display System
+# Author : Saleha Bushra
+# Mundra Airport FIDS - TV Display System
 
-A full-screen, high-readability Flight Information Display System (FIDS) for **Ahmedabad Airport (Sardar Vallabhbhai Patel International Airport - AMD/VAAH)**. The application fetches live flight data from Flightradar24, filters it for the current date, and presents it as an automated, paginated TV slideshow display suitable for airport monitors.
+A full-screen, high-readability Flight Information Display System (FIDS) for **Mundra Airport (MDA/VAMA)**. The application fetches live flight data from Flightradar24, filters it for the current date, and presents it as an automated, paginated TV slideshow display suitable for airport monitors.
 
 ---
 
